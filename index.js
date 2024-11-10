@@ -52,7 +52,7 @@ function createStore(reducer) {
     listeners.forEach((listener) => listener());
   }
 
-  // Function to listen for chnages to the state
+  // Function to listen for changes to the state
 
   function subscribe(listener) {
     listeners.push(listener); // Add listener to the list

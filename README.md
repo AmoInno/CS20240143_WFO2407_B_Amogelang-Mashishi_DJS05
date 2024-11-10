@@ -1,11 +1,10 @@
 # DJS05 Project Brief: Building a Redux-Inspired Store for a Tally App
 
-In this challenge, you will venture into the realm of state management by constructing a Redux-inspired store to manage the state of a simple Tally App. Your primary goal is to manage the app's state changes efficiently, focusing on core functionalities like incrementing, decrementing, and resetting a counter. Instead of rendering changes on the UI, you'll subscribe to state updates and log them to the console, highlighting the power of state management in applications.
+In this challenge, you will venture into the realm of state management by constructing a Redux-inspired store to manage the state of a simple Tally App. The primary goal is to manage the app's state changes efficiently, focusing on core functionalities like incrementing, decrementing, and resetting a counter. Instead of rendering changes on the UI, you'll subscribe to state updates and log them to the console, highlighting the power of state management in applications.
 
 ## Objective
 Create a minimalistic, Redux-inspired store to manage and log the state of a counting Tally App. Your implementation will not involve UI rendering; instead, it will use console logs to demonstrate state management effectively.
 
-Observer Pattern resource from Refactoring Guru: https://refactoring.guru/design-patterns/observer
 
 ## User Stories (Gherkin Syntax)
 Your challenge will encompass the following scenarios, tested through your store's implementation:
@@ -44,26 +43,28 @@ AND the browser console is open
 THEN the state should display a count of 0
 ```
 
-## Requirements
-- **Implement a Global Store**: Create a Redux-inspired store that holds the state of the tally counter. The store should have the ability to dispatch actions and subscribe to state changes.
-- **State Management Functions**:
-  - **getState**: Returns the current state.
-  - **dispatch**: Takes an action (e.g., ADD, SUBTRACT, RESET) and updates the state accordingly.
-  - **subscribe**: Accepts a function that gets called whenever the state changes. This function should log the new state to the console.
-- **No UI Rendering**: This challenge focuses on state management without the complexity of UI rendering. All state changes should be observable through console logs.
-- **Functional Programming Principles**: Draw upon functional programming concepts as illustrated in the reference videos. While Redux is the inspiration, you're encouraged to apply these principles creatively in your implementation.
+## How to run your code.
 
-## Submission Guidelines
-Your submission should consist of a JavaScript file(s) that encapsulate your Redux-inspired store and the logic for dispatching actions and subscribing to changes. Include a README.md file explaining:
-- How to run your code.
-- A brief overview of your approach.
-- Any challenges you faced and how you overcame them.
+- Ensure that you have node.js installed.
+- Open the terminal( In VS Code, you open it with Terminal - New Terminal)
+- To run the code: use 'node index.js'
 
-Ensure your code is well-commented and adheres to best practices for readability and maintainability.
+## A brief overview of my approach.
 
-## Evaluation Criteria
-- **Correctness**: Your implementation should correctly handle the scenarios as outlined in the user stories.
-- **Code Quality**: Use of functional programming principles, clear naming conventions, and code organization.
-- **Documentation**: Clarity of your approach and reflections in the README.md.
+- Created functions that define each action type (increment, decrement, reset).
+- Created reducer function to handle each action type and return a new state based on the dispatched action.
+- Create a Redux-inspired store that holds the state of the tally counter. The store includes the following functions: 
+     - getState which returns the current state.
+     - dispatch which takes an action (INCREMENT, DECREMENT, RESET) and updates the state accordingly.
+     - subscribe which logs the new state to the console.
 
-This challenge is an excellent opportunity to demonstrate your understanding of state management concepts and functional programming principles. Good luck!
+
+## Challenges you faced and how you overcame them.
+Developing a Redux-inspired store from scratch was a new experience. It required understanding the core functionalities of Redux, such as action dispatching, state management, and the subscription mechanism.
+
+## Solution**: 
+- I did A LOT of research to ensure that I understood what was required of me and what I had to do. I then broke down the problem into smaller components. 
+- Building the `dispatch`, `getState`, and `subscribe` methods step-by-step helped me understand how they work together to manage and observe state changes effectively.
+
+
+
