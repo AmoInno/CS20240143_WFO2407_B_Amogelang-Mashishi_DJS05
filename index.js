@@ -58,7 +58,6 @@ function createStore(reducer) {
     listeners.push(listener); // Add listener to the list
 
     // Remove listener from the list
-
     return () => {
       listeners = listeners.filter((l) => l !== listener);
     };
